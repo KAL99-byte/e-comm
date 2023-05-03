@@ -61,27 +61,8 @@ AppAsset::register($this);
 <?= $this->render('top2') ?>
 <?= $this->render('navbar3') ?>
 <?= $this->render('slider4') ?>
-<?= $this->render('featured5') ?>
-<?= $this->render('categories6') ?>
-<?= $this->render('featured_products7') ?>
-<?= $this->render('offer8') ?>
-<?= $this->render('recent_products9') ?>
-<?= $this->render('vendor10') ?>
 
-
-
-
-
-<main role="main" class="flex-shrink-0">
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
-</main>
-
+<?= $content ?>
 <?= $this->render('footer') ?>
 
 <?php $this->endBody() ?>

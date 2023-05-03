@@ -22,14 +22,21 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
     // 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css',
-
-    'css/all.min.css',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
-  
 
-   'css/animate.min.css',
+
+
+       'css/animate.min.css',
+
    'css/owl.carousel.min.css',
     'css/style.css',
+    // 'css/all.min.css',
+
+
+
+    // 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css',
+'https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap4.min.css',
+
 
     ];
     public $js = [
@@ -45,6 +52,11 @@ class AppAsset extends AssetBundle
      'js/jqBootstrapValidation.min.js',
     'js/contact.js',
      'js/main.js',
+     'js/datatables.js',
+     'https://code.jquery.com/jquery-3.5.1.js',
+     'https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js',
+     'https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js',
+
     ];
     public $depends = [
         'yii\web\YiiAsset',

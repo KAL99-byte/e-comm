@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Brand;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -9,12 +10,22 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Product;
 
 class SiteController extends Controller
 {
     /**
      * {@inheritdoc}
      */
+
+
+
+
+
+
+
+
+
     public function behaviors()
     {
         return [
@@ -61,8 +72,16 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $recentproducts=Product::find()->orderBy('created_at desc')->all();
+        $brands=Brand::find()->orderBy('created_at desc')->all();
+  
+        return $this->render('index',[
+            'recentproducts'=>$recentproducts,
+            'brands'=>$brands
+        ]);
     }
+
+    
 
     /**
      * Login action.
@@ -71,6 +90,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        $this->layout='login';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
