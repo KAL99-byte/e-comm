@@ -2,15 +2,16 @@
 
 namespace app\controllers;
 
-use app\models\Brand;
 use Yii;
-use yii\filters\AccessControl;
-use yii\web\Controller;
+use app\models\Brand;
 use yii\web\Response;
-use yii\filters\VerbFilter;
+use app\models\Product;
+use yii\web\Controller;
+use app\models\Category;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\Product;
+use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 class SiteController extends Controller
 {
@@ -70,14 +71,18 @@ class SiteController extends Controller
      *
      * @return string
      */
+
+
     public function actionIndex()
     {
+        $categories=Category::find()->orderby('created_at desc')->all();
         $recentproducts=Product::find()->orderBy('created_at desc')->all();
         $brands=Brand::find()->orderBy('created_at desc')->all();
   
         return $this->render('index',[
             'recentproducts'=>$recentproducts,
-            'brands'=>$brands
+            'brands'=>$brands,
+            'categories'=>$categories
         ]);
     }
 

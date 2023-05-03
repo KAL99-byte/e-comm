@@ -4,45 +4,27 @@
 use yii\helpers\Html;
 ?>
     <!-- Vendor Start -->
+
     <div class="container-fluid py-5">
+    
         <div class="row px-xl-5">
+
             <div class="col">
+           
                 <div class="owl-carousel vendor-carousel">
+                <?php foreach($brands as $brand): ?>
                     <div class="bg-light p-4">
                      
-                        <?= Html::img('@web/img/vendor-1.jpg', [ 'alt' => '']) ?>
+                        <?= Html::img('@web/uploads/imgs/'.$brand->logo, [ 'alt' => '']) ?>
                     </div>
-                    <div class="bg-light p-4">
-                     
-                        <?= Html::img('@web/img/vendor-2.jpg', [ 'alt' => '']) ?>
-                    </div>
-                    <div class="bg-light p-4">
-                    
-                        <?= Html::img('@web/img/vendor-3.jpg', [ 'alt' => '']) ?>
-                    </div>
-                    <div class="bg-light p-4">
-                     
-                        <?= Html::img('@web/img/vendor-4.jpg', [ 'alt' => '']) ?>
-                    </div>
-                    <div class="bg-light p-4">
-                     
-                        <?= Html::img('@web/img/vendor-5.jpg', [ 'alt' => '']) ?>
-                    </div>
-                    <div class="bg-light p-4">
-                       
-                        <?= Html::img('@web/img/vendor-6.jpg', [ 'alt' => '']) ?>
-                    </div>
-                    <div class="bg-light p-4">
-                     
-                        <?= Html::img('@web/img/vendor-7.jpg', [ 'alt' => '']) ?>
-                    </div>
-                    <div class="bg-light p-4">
-                   
-                        <?= Html::img('@web/img/vendor-8.jpg', [ 'alt' => '']) ?>
-                    </div>
+                    <?php endforeach ?>
                 </div>
+               
             </div>
+            
         </div>
+       
     </div>
+  
     <!-- Vendor End -->
 
