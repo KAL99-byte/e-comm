@@ -1,4 +1,9 @@
+<?php
 
+use app\models\Infosite;
+
+$phones =Infosite::find()->all();
+?>
     <!-- Topbar Start -->
     <div class="container-fluid">
         <div class="row bg-secondary py-1 px-xl-5">
@@ -51,8 +56,8 @@
         <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
             <div class="col-lg-4">
                 <a href="" class="text-decoration-none">
-                    <span class="h1 text-uppercase text-primary bg-dark px-2">Multi</span>
-                    <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">Shop</span>
+                    <span class="h1 text-uppercase text-primary bg-dark px-2">CPTN </span>
+                    <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">SHOP</span>
                 </a>
             </div>
             <div class="col-lg-4 col-6 text-left">
@@ -68,8 +73,10 @@
                 </form>
             </div>
             <div class="col-lg-4 col-6 text-right">
+                <?php foreach($phones as $number): ?>
                 <p class="m-0">Customer Service</p>
-                <h5 class="m-0">+012 345 6789</h5>
+                <h5 class="m-0"><?= $number->phone ?></h5>
+                <?php endforeach ?>
             </div>
         </div>
     </div>

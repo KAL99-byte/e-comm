@@ -1,8 +1,5 @@
     <?php
 use yii\helpers\html;
-use app\models\Homephoto;
-
-$offers =Homephoto::find()->where(['category'=>'special_offer'])->all();
 ?>
     <!-- Offer Start -->
     <div class="container-fluid pt-5 pb-3">

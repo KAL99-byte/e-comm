@@ -11,7 +11,7 @@ use yii\helpers\Html;
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <?= Html::img('@web/uploads/imgs/'.$product->photo, ['class' => 'img-fluid w-100', 'alt' => '']) ?>
+                        <?= Html::img('@web/uploads/imgs/'.$product->photo, ['class' => 'img-fluid w-100', 'alt' => '','style' => 'max-width: 100%; height: auto;']) ?>
                         <div class="product-action">
                             <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
                             <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>

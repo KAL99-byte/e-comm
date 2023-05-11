@@ -8,6 +8,7 @@ use yii\web\Response;
 use app\models\Product;
 use yii\web\Controller;
 use app\models\Category;
+use app\models\Homephoto;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use yii\filters\VerbFilter;
@@ -78,11 +79,14 @@ class SiteController extends Controller
         $categories=Category::find()->orderby('created_at desc')->all();
         $recentproducts=Product::find()->orderBy('created_at desc')->all();
         $brands=Brand::find()->orderBy('created_at desc')->all();
+        $offers =Homephoto::find()->where(['category'=>'special_offer'])->all();
+      
   
         return $this->render('index',[
             'recentproducts'=>$recentproducts,
             'brands'=>$brands,
-            'categories'=>$categories
+            'categories'=>$categories,
+            'offers'=>$offers
         ]);
     }
 

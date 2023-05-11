@@ -30,7 +30,7 @@ use yii\db\Expression;
          return[
  
             [['name','photo'],'required'],
-            [['photo'], 'image', 'extensions' => 'jpg, png'],
+            [['photo'], 'image', 'extensions' => 'jpg, png,jpeg'],
             [['status', 'created_by' ,'created_at' ,'updated_at','updated_by'],'safe'],
  
          ];

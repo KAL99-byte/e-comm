@@ -20,42 +20,30 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
+
         'css/site.css',
-    // 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css',
-    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
-
-
-
-       'css/animate.min.css',
-
-   'css/owl.carousel.min.css',
-    'css/style.css',
-    // 'css/all.min.css',
-
-
-
-    // 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css',
-'https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap4.min.css',
-
-
+    'https://fonts.gstatic.com',
+      'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap', 
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css',
+      'css/animate.min.css',
+      'css/owl.carousel.min.css',
+      'css/style.css',
+    
     ];
     public $js = [
 
+       'https://code.jquery.com/jquery-3.4.1.min.js',
+       'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js',
+       
+       
+       'js/easing.min.js',
+       'js/owl.carousel.min.js',
+       'js/jqBootstrapValidation.min.js',
+       'js/contact.js',
+       'js/main.js',
 
 
-
-        'js/jquery-3.4.1.min.js',
-     'js/bootstrap/4.4.1/js/bootstrap.bundle.min.js',
-   
-     'js/easing.min.js',
-     'js/owl.carousel.min.js',
-     'js/jqBootstrapValidation.min.js',
-    'js/contact.js',
-     'js/main.js',
-     'js/datatables.js',
-     'https://code.jquery.com/jquery-3.5.1.js',
-     'https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js',
-     'https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js',
+      
 
     ];
     public $depends = [

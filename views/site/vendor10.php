@@ -15,8 +15,10 @@ use yii\helpers\Html;
                 <?php foreach($brands as $brand): ?>
                     <div class="bg-light p-4">
                      
-                        <?= Html::img('@web/uploads/imgs/'.$brand->logo, [ 'alt' => '']) ?>
+                        <?= Html::img('@web/uploads/imgs/'.$brand->logo, [ 'alt' => '','style' => 'max-width: 100%; height: 100;']) ?>
                     </div>
+
+               
                     <?php endforeach ?>
                 </div>
                
@@ -28,3 +30,4 @@ use yii\helpers\Html;
   
     <!-- Vendor End -->
 
+    
